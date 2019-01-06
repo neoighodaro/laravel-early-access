@@ -2,7 +2,7 @@
 
 All notable changes will be documented in this file.
 
-## Version v1.1.0
+## Version v1.1.1
 
 ## Fixed
 
