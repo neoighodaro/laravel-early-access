@@ -1,18 +1,17 @@
+<p align="center"><img src="https://user-images.githubusercontent.com/807318/50734264-f84ee080-119c-11e9-9fa4-ef0a58f36d7f.png"></p>
+
+<p align="center">This package makes it easy to add early access mode to your existing application. This is useful for when you want to 
+                  launch a product and need to gather the email addresses of people who want early access to the application.</p>
 <p align="center">
-    <h1>Laravel Early Access</h1>
-</p>
+    <a href="https://www.codementor.io/neoighodaro?utm_source=github&utm_medium=button&utm_term=neoighodaro&utm_campaign=github"><img src="https://cdn.codementor.io/badges/get_help_github.svg">
+</a>
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/807318/50734150-a442fc80-119a-11e9-9dfa-57904bb001f7.png">
-</p>
-
-This package makes it easy to add early access mode to your existing application. This is useful for when you want to 
-launch a product and need to gather the email addresses of people who want early access to the application. 
+<p align="center"><img src="https://user-images.githubusercontent.com/807318/50734150-a442fc80-119a-11e9-9dfa-57904bb001f7.png"></p> 
 
 > Take a look at [contributing.md](contributing.md) to see a to do list.
 
