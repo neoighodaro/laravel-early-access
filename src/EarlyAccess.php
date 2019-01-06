@@ -66,7 +66,9 @@ class EarlyAccess
     public function addAllowedNetworksToBeacon(array $networks)
     {
         if ($data = $this->getBeaconDetails()) {
-            array_push($data['allows'], ...$networks);
+            if (! empty($networks)) {
+                array_push($data['allowed'], ...$networks);
+            }
 
             $data['allowed'] = array_unique($data['allowed']);
 
@@ -109,7 +111,7 @@ class EarlyAccess
      */
     public function getBeaconDetails()
     {
-        if (!$this->storage->exists('early-access')) {
+        if (! $this->storage->exists('early-access')) {
             return false;
         }
 
