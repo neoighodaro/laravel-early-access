@@ -66,7 +66,9 @@ class EarlyAccess
     public function addAllowedNetworksToBeacon(array $networks)
     {
         if ($data = $this->getBeaconDetails()) {
-            array_push($data['allowed'], ...$networks);
+            if (! empty($networks)) {
+                array_push($data['allowed'], ...$networks);
+            }
 
             $data['allowed'] = array_unique($data['allowed']);
 
