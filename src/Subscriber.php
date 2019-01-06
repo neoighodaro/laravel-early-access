@@ -12,7 +12,7 @@ use Neo\EarlyAccess\Contracts\Subscription\SubscriptionProvider;
  * @property string|null email
  * @property string|null name
  * @property string|null subscribed_at
- * @property boolean verified
+ * @property bool verified
  */
 class Subscriber implements Arrayable
 {
