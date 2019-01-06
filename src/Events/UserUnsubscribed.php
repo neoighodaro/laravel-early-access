@@ -20,7 +20,7 @@ class UserUnsubscribed implements ShouldQueue
     /**
      * Subscriber instance.
      *
-     * @var \Neo\EarlyAccess\Subscriber $subscriber
+     * @var \Neo\EarlyAccess\Subscriber
      */
     public $subscriber;
 
