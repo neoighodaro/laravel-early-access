@@ -9,7 +9,7 @@
     <a href="https://packagist.org/packages/neo/laravel-early-access"><img src="https://poser.pugx.org/neo/laravel-early-access/downloads?format=flat-square"></a>
     <a href="https://travis-ci.org/neoighodaro/laravel-early-access"><img src="https://img.shields.io/travis/neoighodaro/laravel-early-access/master.svg?style=flat-square"></a>
     <a href="https://styleci.io/repos/164292196"><img src="https://styleci.io/repos/164292196/shield"></a>   
-    <a href="https://scrutinizer-ci.com/g/neoighodaro/laravel-early-access/"><img src="https://scrutinizer-ci.com/g/neoighodaro/laravel-early-access/badges/quality-score.png?b=master"></a>   
+    <a href="https://scrutinizer-ci.com/g/neoighodaro/laravel-early-access/"><img src="https://img.shields.io/scrutinizer/g/neoighodaro/laravel-early-access.svg?style=flat-square"></a>   
 </a>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/807318/50734150-a442fc80-119a-11e9-9dfa-57904bb001f7.png"></p> 
