@@ -7,6 +7,7 @@
     <a href="https://www.codementor.io/neoighodaro?utm_source=github&utm_medium=button&utm_term=neoighodaro&utm_campaign=github"><img src="https://cdn.codementor.io/badges/get_help_github.svg">
     <a href="license.md"><img src="https://poser.pugx.org/neo/laravel-early-access/license"/></a>
     <a href="https://packagist.org/packages/neo/laravel-early-access"><img src="https://img.shields.io/packagist/v/neo/laravel-early-access.svg?style=flat-square"></a>
+      [![Latest Stable Version](https://poser.pugx.org/neo/laravel-early-access/v/stable)](https://packagist.org/packages/neo/laravel-early-access)
     <a href="https://packagist.org/packages/neo/laravel-early-access"><img src="https://img.shields.io/packagist/dt/neo/laravel-early-access.svg?style=flat-square"></a>
     <a href="https://travis-ci.org/neoighodaro/laravel-early-access"><img src="https://img.shields.io/travis/neoighodaro/laravel-early-access/master.svg?style=flat-square"></a>
     <a href="https://styleci.io/repos/164292196"><img src="https://styleci.io/repos/164292196/shield"></a>      
