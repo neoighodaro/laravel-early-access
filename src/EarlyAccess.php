@@ -82,7 +82,7 @@ class EarlyAccess
      */
     public function saveBeacon(array $allowed = []): bool
     {
-        if ($data = $this->getBeaconDetails()) {
+        if ($this->getBeaconDetails()) {
             return (bool) $this->addAllowedNetworksToBeacon($allowed);
         }
 

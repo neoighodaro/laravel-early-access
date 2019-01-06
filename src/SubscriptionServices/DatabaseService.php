@@ -9,7 +9,7 @@ use Neo\EarlyAccess\Contracts\Subscription\SubscriptionRepository;
 class DatabaseService implements SubscriptionProvider
 {
     /**
-     * @var \Neo\EarlyAccess\SubscriptionServices\DatabaseRepository\SubscriptionRepository
+     * @var \Neo\EarlyAccess\Contracts\Subscription\SubscriptionRepository
      */
     protected $repository;
 

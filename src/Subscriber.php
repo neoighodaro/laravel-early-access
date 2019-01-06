@@ -8,6 +8,12 @@ use Illuminate\Contracts\Support\Arrayable;
 use Neo\EarlyAccess\Events\UserUnsubscribed;
 use Neo\EarlyAccess\Contracts\Subscription\SubscriptionProvider;
 
+/**
+ * @property string|null email
+ * @property string|null name
+ * @property string|null subscribed_at
+ * @property boolean verified
+ */
 class Subscriber implements Arrayable
 {
     use Notifiable;

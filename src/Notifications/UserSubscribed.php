@@ -13,7 +13,7 @@ class UserSubscribed extends Notification implements ShouldQueue
     use Queueable;
 
     /**
-     * @var \Neo\EarlyAccess\Notifications\Subscriber
+     * @var \Neo\EarlyAccess\Subscriber
      */
     public $subscriber;
 
@@ -30,10 +30,9 @@ class UserSubscribed extends Notification implements ShouldQueue
     /**
      * Get the notification's delivery channels.
      *
-     * @param  mixed $notifiable
      * @return array
      */
-    public function via($notifiable)
+    public function via()
     {
         return ['mail'];
     }
@@ -41,27 +40,13 @@ class UserSubscribed extends Notification implements ShouldQueue
     /**
      * Get the mail representation of the notification.
      *
-     * @param  mixed $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail($notifiable)
+    public function toMail()
     {
         return (new MailMessage)
             ->subject(trans('early-access::mail.subscribed.subject', ['name' => config('app.name')]))
             ->line(trans('early-access::mail.subscribed.message.intro', ['name' => config('app.name')]))
             ->action('Share on Twitter', route('early-access.share'));
-    }
-
-    /**
-     * Get the array representation of the notification.
-     *
-     * @param  mixed $notifiable
-     * @return array
-     */
-    public function toArray($notifiable)
-    {
-        return [
-            //
-        ];
     }
 }
