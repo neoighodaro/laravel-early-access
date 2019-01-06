@@ -117,7 +117,7 @@ Now that you have installed it successfully, you can start configuring it. First
 application if you have not already done so.
 
 ```shell
-$ php artisan vendor:publish --provider="Neo\EarlyAccess\EarlyAccessServiceProvider --tag=config
+$ php artisan vendor:publish --provider="Neo\EarlyAccess\EarlyAccessServiceProvider" --tag=config
 ```
 
 #### Configuration options
