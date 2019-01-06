@@ -30,7 +30,7 @@ class EarlyAccess extends Command
     protected $description = 'Activate, deactivate, or check if early access mode is enabled.';
 
     /**
-     * @var \Illuminate\Contracts\Filesystem\Filesystem $storage
+     * @var \Illuminate\Contracts\Filesystem\Filesystem
      */
     private $storage;
 
@@ -107,6 +107,6 @@ class EarlyAccess extends Command
                 : 'none';
         });
 
-        $this->info($data ? "Active. Allowed networks: {$allowedNetworks}" : "Not active");
+        $this->info($data ? "Active. Allowed networks: {$allowedNetworks}" : 'Not active');
     }
 }

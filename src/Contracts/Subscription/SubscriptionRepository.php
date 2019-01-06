@@ -36,5 +36,4 @@ interface SubscriptionRepository
      * @return array|false
      */
     public function findByEmail(string $email);
-
 }

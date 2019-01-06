@@ -2,11 +2,13 @@
 
 namespace Neo\EarlyAccess;
 
-use Neo\EarlyAccess\Events;
-use Neo\EarlyAccess\Listeners;
 use Neo\EarlyAccess\Console\Commands;
 use Illuminate\Support\ServiceProvider;
+use Neo\EarlyAccess\Events\UserSubscribed;
+use Neo\EarlyAccess\Events\UserUnsubscribed;
 use Neo\EarlyAccess\SubscriptionServices\DatabaseService;
+use Neo\EarlyAccess\Listeners\SendUnsubscribeNotification;
+use Neo\EarlyAccess\Listeners\SendSubscriptionNotification;
 use Neo\EarlyAccess\Contracts\Subscription\SubscriptionProvider;
 use Neo\EarlyAccess\SubscriptionServices\Repositories\Database\EloquentRepository;
 
@@ -107,14 +109,8 @@ class EarlyAccessServiceProvider extends ServiceProvider
      */
     protected function registerEventListeners()
     {
-        $this->app['events']->listen(
-            Events\UserSubscribed::class,
-            Listeners\SendSubscriptionNotification::class
-        );
+        $this->app['events']->listen(UserSubscribed::class, SendSubscriptionNotification::class);
 
-        $this->app['events']->listen(
-            Events\UserUnsubscribed::class,
-            Listeners\SendUnsubscribeNotification::class
-        );
+        $this->app['events']->listen(UserUnsubscribed::class, SendUnsubscribeNotification::class);
     }
 }

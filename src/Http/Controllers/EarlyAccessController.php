@@ -60,7 +60,7 @@ class EarlyAccessController extends BaseController
         });
 
         return redirect()->route('early-access.index')->with([
-            ($unsubscribed ? "success" : "error") => true,
+            ($unsubscribed ? 'success' : 'error') => true,
         ]);
     }
 

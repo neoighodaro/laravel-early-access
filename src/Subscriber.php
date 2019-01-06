@@ -13,12 +13,12 @@ class Subscriber implements Arrayable
     use Notifiable;
 
     /**
-     * @var array $attributes
+     * @var array
      */
     protected $attributes = [];
 
     /**
-     * @var bool $exists
+     * @var bool
      */
     protected $exists = false;
 
@@ -126,7 +126,7 @@ class Subscriber implements Arrayable
      * @param string|null $email
      * @return \Neo\EarlyAccess\Subscriber|null
      */
-    public function findByEmail(string $email = null): ?Subscriber
+    public function findByEmail(string $email = null): ?self
     {
         if (! $email and ! $this->email) {
             return null;
