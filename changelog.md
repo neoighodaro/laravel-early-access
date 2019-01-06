@@ -2,6 +2,14 @@
 
 All notable changes will be documented in this file.
 
+## Version dev-master
+
+## Fixed
+
+- Typo in the translations file.
+
+### Fixed
+
 ## Version 1.0.2
 
 ### Fixed
