@@ -1,0 +1,36 @@
+language: php
+
+php:
+  - 7.1
+  - 7.2
+  - 7.3
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+env:
+  - TESTBENCH_VERSION=3.6.* PHPUNIT_VERSION=~7 STABILITY=stable
+  - TESTBENCH_VERSION=dev-master PHPUNIT_VERSION=~7 STABILITY=dev
+
+matrix:
+  include:
+    - php: 7.0
+      env: TESTBENCH_VERSION=3.5.* PHPUNIT_VERSION=~6 STABILITY=stable
+  allow_failures:
+    - env: TESTBENCH_VERSION=dev-master PHPUNIT_VERSION=~7 STABILITY=dev
+    - php: nightly
+  fast_finish: true
+
+before_script:
+  - travis_retry composer self-update
+  - composer config minimum-stability ${STABILITY}
+  - travis_retry composer require "orchestra/testbench:${TESTBENCH_VERSION}" "phpunit/phpunit:${PHPUNIT_VERSION}" --no-update
+  - travis_retry composer update --no-interaction --prefer-source
+
+script:
+  - phpunit --coverage-text --coverage-clover=coverage.clover
+
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover

@@ -11,7 +11,6 @@
     <a href="https://styleci.io/repos/12345678"><img src="https://styleci.io/repos/12345678/shield"></a>      
 </a>
 
-
 <p align="center"><img src="https://user-images.githubusercontent.com/807318/50734150-a442fc80-119a-11e9-9dfa-57904bb001f7.png"></p> 
 
 > Take a look at [contributing.md](contributing.md) to see a to do list.
