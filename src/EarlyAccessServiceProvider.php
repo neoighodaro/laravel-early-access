@@ -84,11 +84,11 @@ class EarlyAccessServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->publishes([
-            __DIR__ . '/../resources/views' => base_path('resources/views/vendor/neo'),
+            __DIR__ . '/../resources/views' => base_path('resources/views/vendor/early-access'),
         ], 'views');
 
         $this->publishes([
-            __DIR__ . '/../public' => public_path('vendor/neo'),
+            __DIR__ . '/../public' => public_path('vendor/early-access'),
         ], 'assets');
 
         $this->publishes([
@@ -96,7 +96,7 @@ class EarlyAccessServiceProvider extends ServiceProvider
         ], 'migrations');
 
         $this->publishes([
-            __DIR__ . '/../resources/lang' => resource_path('lang/vendor/neo'),
+            __DIR__ . '/../resources/lang' => resource_path('lang/vendor/early-access'),
         ], 'translations');
 
         $this->commands([

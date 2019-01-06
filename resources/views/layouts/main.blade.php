@@ -7,7 +7,7 @@
     <title>{{ $page_title ?? trans('early-access::common.early_access') }} | {{ config('app.name') }}</title>
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Rajdhani:600" rel="stylesheet" type="text/css">
-    <link href="{{ asset('vendor/neo/css/early-access.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/early-access/css/early-access.css') }}" rel="stylesheet">
 </head>
 <body class="h-full w-full">
 <div id="app" class="flex flex-col w-full h-full">
