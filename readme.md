@@ -51,6 +51,8 @@ return [
 ];
 ```
 
+If you are on a Laravel version greater than 5.4, it will be registered automatically by Laravel.
+
 Register the middleware `Neo\EarlyAccess\Http\Middleware\CheckForEarlyAccessMode` at the bottom of your `web` group 
 middleware in `app/Http/Middleware/Kernel.php`.
 
