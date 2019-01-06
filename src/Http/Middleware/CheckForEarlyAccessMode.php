@@ -69,6 +69,10 @@ class CheckForEarlyAccessMode
             config('early-access.login_url'),
         ];
 
+        $defaultExceptions = array_filter($defaultExceptions, function ($item) {
+            return trim($item, '/') !== '*';
+        });
+
         array_push($this->except, ...$defaultExceptions);
 
         foreach (array_unique($this->except) as $except) {
