@@ -12,6 +12,7 @@
     <testsuites>
         <testsuite name="Neo Test Suite">
             <directory suffix=".php">./tests/</directory>
+            <exclude>./tests/Feature</exclude>
         </testsuite>
     </testsuites>
     <filter>

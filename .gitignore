@@ -1,5 +1,6 @@
 /dist
 /node_modules
 /vendor
+phpunit.xml
 yarn-error.log
 yarn.lock
