@@ -4,7 +4,6 @@
                   launch a product and need to gather the email addresses of people who want early access to the application.</p>
                   
 <p align="center">
-    <a href="https://www.codementor.io/neoighodaro?utm_source=github&utm_medium=button&utm_term=neoighodaro&utm_campaign=github"><img src="https://cdn.codementor.io/badges/get_help_github.svg">
     <a href="license.md"><img src="https://poser.pugx.org/neo/laravel-early-access/license?format=flat-square"/></a>
     <a href="https://packagist.org/packages/neo/laravel-early-access"><img src="https://poser.pugx.org/neo/laravel-early-access/v/stable?format=flat-square"/></a>
     <a href="https://packagist.org/packages/neo/laravel-early-access"><img src="https://poser.pugx.org/neo/laravel-early-access/downloads?format=flat-square"></a>
