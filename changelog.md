@@ -2,6 +2,12 @@
 
 All notable changes to `LaravelEarlyAccess` will be documented in this file.
 
+## Version 1.0.2
+
+### Fixed
+
+- Error with setting `/` as the early access mode URL.
+
 ## Version 1.0.1
 
 ### Fixed
