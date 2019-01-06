@@ -2,11 +2,12 @@
 
 All notable changes will be documented in this file.
 
-## Version dev-master
+## Version v1.1.0
 
 ## Fixed
 
 - Typo in the translations file.
+- Fixed bug where wrong name space was used for publishing some vendor files.
 
 ### Fixed
 
