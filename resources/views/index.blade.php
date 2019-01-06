@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="mt-16 md:mt-0 md:pl-5 lg:pl-10 md:w-3/5 text-center md:text-left">
-            <img src="{{ asset('vendor/neo/svg/placeholder.svg') }}" class="block"/>
+            <img src="{{ asset('vendor/early-access/svg/placeholder.svg') }}" class="block"/>
         </div>
     </div>
 @endsection
