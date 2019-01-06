@@ -1,4 +1,4 @@
-<p align="center"><img src="https://user-images.githubusercontent.com/807318/50734264-f84ee080-119c-11e9-9fa4-ef0a58f36d7f.png"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/807318/50734296-6398b280-119d-11e9-993c-54408c710b32.png"></p>
 
 <p align="center">This package makes it easy to add early access mode to your existing application. This is useful for when you want to 
                   launch a product and need to gather the email addresses of people who want early access to the application.</p>
