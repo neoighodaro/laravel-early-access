@@ -1,15 +1,16 @@
-<p align="center"><img width="200" src="https://user-images.githubusercontent.com/807318/50734296-6398b280-119d-11e9-993c-54408c710b32.png"></p>
+<p align="center"><img width="240" src="https://user-images.githubusercontent.com/807318/50734296-6398b280-119d-11e9-993c-54408c710b32.png"></p>
 
 <p align="center">This package makes it easy to add early access mode to your existing application. This is useful for when you want to 
                   launch a product and need to gather the email addresses of people who want early access to the application.</p>
+                  
 <p align="center">
     <a href="https://www.codementor.io/neoighodaro?utm_source=github&utm_medium=button&utm_term=neoighodaro&utm_campaign=github"><img src="https://cdn.codementor.io/badges/get_help_github.svg">
+    <a href="https://packagist.org/packages/neoighodaro/laravel-early-access"><img src="https://img.shields.io/packagist/v/neoighodaro/laravel-early-access.svg?style=flat-square"></a>
+    <a href="https://packagist.org/packages/neoighodaro/laravel-early-access"><img src="https://img.shields.io/packagist/dt/neoighodaro/laravel-early-access.svg?style=flat-square"></a>
+    <a href="https://travis-ci.org/neoighodaro/laravel-early-access"><img src="https://img.shields.io/travis/neoighodaro/laravel-early-access/master.svg?style=flat-square"></a>
+    <a href="https://styleci.io/repos/12345678"><img src="https://styleci.io/repos/12345678/shield"></a>      
 </a>
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
 
 <p align="center"><img src="https://user-images.githubusercontent.com/807318/50734150-a442fc80-119a-11e9-9dfa-57904bb001f7.png"></p> 
 
@@ -231,14 +232,5 @@ If you discover any security related issues, please email author email instead o
 
 Please see the [license file](license.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/neoighodaro/laravel-early-access.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/neoighodaro/laravel-early-access.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/neoighodaro/laravel-early-access/master.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/12345678/shield
-
-[link-packagist]: https://packagist.org/packages/neoighodaro/laravel-early-access
-[link-downloads]: https://packagist.org/packages/neoighodaro/laravel-early-access
-[link-travis]: https://travis-ci.org/neoighodaro/laravel-early-access
-[link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/neoighodaro
 [link-contributors]: ../../contributors]
