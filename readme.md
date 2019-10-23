@@ -1,7 +1,8 @@
-<p align="center"><img width="240" src="https://user-images.githubusercontent.com/807318/50734296-6398b280-119d-11e9-993c-54408c710b32.png"></p>
+<p align="center">
+    <img width="400" height="160" src="https://raw.githubusercontent.com/neoighodaro/laravel-early-access/master/art/logo.png" alt="Laravel Early Access logo" />
+</p>
 
-<p align="center">This package makes it easy to add early access mode to your existing application. This is useful for when you want to
-                  launch a product and need to gather the email addresses of people who want early access to the application.</p>
+<p align="center">This package makes it easy to add early access mode to your existing application. This is useful for when you want to launch a product and need to gather the email addresses of people who want early access to the application.</p>
 
 <p align="center">
     <a href="license.md"><img src="https://poser.pugx.org/neo/laravel-early-access/license?format=flat-square"/></a>
@@ -273,6 +274,7 @@ If you discover any security related issues, please email author email instead o
 ## Credits
 
 - [Neo Ighodaro][link-author]
+- [Caneco](https://twitter.com/caneco) (for the logo)
 - [All Contributors][link-contributors]
 
 ## License
