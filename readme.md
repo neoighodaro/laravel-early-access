@@ -17,6 +17,8 @@
 
 > Take a look at [contributing.md](contributing.md) to see a to do list.
 
+>⚠️ This version supports Laravel 6 and above. Use version 1.x if you require Laravel 5 support.
+
 ## Installation
 
 #### Via Composer
@@ -26,35 +28,6 @@ To install via composer, run the following command in the root of your Laravel a
 ```bash
 $ composer require neo/laravel-early-access
 ```
-
-If you are on Laravel 5.4 or below, register the `Neo\EarlyAccess\EarlyAccessServiceProvider` service provider in the `config/app.php` file.
-
-```php
-<?php
-
-return [
-
-    // [...]
-
-    'providers' => [
-
-        // [...]
-
-        /*
-         * Package Service Providers...
-         */
-        Neo\EarlyAccess\EarlyAccessServiceProvider::class,
-
-        /*
-         * Application Service Providers...
-         */
-
-        // [...]
-    ],
-];
-```
-
-If you are on a Laravel version greater than 5.4, it will be registered automatically by Laravel.
 
 Register the middleware `Neo\EarlyAccess\Http\Middleware\CheckForEarlyAccessMode` at the bottom of your `web` group
 middleware in `app/Http/Middleware/Kernel.php`.
@@ -77,7 +50,7 @@ middleware in `app/Http/Middleware/Kernel.php`.
 Next, add/update the `MAIL_*` keys in your `.env` file. Make sure to include `MAIL_FROM_*` keys as it is required when
 sending welcome or goodbye emails to subscribers.
 
-Also you can optionally add the following environment variables to your `.env` file:
+Also, you can optionally add the following environment variables to your `.env` file:
 
 ```
 EARLY_ACCESS_ENABLED=true
@@ -89,13 +62,13 @@ EARLY_ACCESS_SERVICE_DRIVER=database
 EARLY_ACCESS_SERVICE_DB_TABLE=subscribers
 ```
 
-Now run the following command to migrate the required tables:
+Now migrate the required tables:
 
 ```shell
 $ php artisan migrate
 ```
 
-Next, publish the packages assets:
+And publish the required assets:
 
 ```shell
 $ php artisan vendor:publish --provider="Neo\EarlyAccess\EarlyAccessServiceProvider"
@@ -108,19 +81,16 @@ This will make the config, migrations, views, and assets available inside your a
 
 To activate early access, you can do either of the following:
 
-- Run the command `$ php artisan early-access --activate` (Recommended)
+- Run the command `$ php artisan early-access --activate`
 - Set the `EARLY_ACCESS_ENABLED` to true in your `.env` file
 
 > **TIP:** Using the artisan command allows you to add IP addresses that are allowed to bypass the early access screen altogether.
 >
 > `$ php artisan early-access --allow=127.0.0.1 --allow=0.0.0.0`
 >
-> Also note that logged in users will bypass the early access screen also.
+> Note that logged in users will also bypass the early access screen.
 
 ## Configuration
-
-Now that you have installed it successfully, you can start configuring it. First, publish the configuration file to your
-application if you have not already done so.
 
 ```shell
 $ php artisan vendor:publish --provider="Neo\EarlyAccess\EarlyAccessServiceProvider" --tag=config
@@ -138,7 +108,8 @@ $ php artisan vendor:publish --provider="Neo\EarlyAccess\EarlyAccessServiceProvi
 - `login_url` - The URL to your application's login page. This URL will automatically be bypassed even if early access
   mode is turned on. `default: /login`
 
-- `twitter_handle` - This is used when sending subscription confirmation via email.
+- `twitter_handle` - This is used when sending subscription confirmation via email. The user will have the option to tweet
+ with the handle you specify tagged.
 
 - `view` - The early access screen view to be loaded. You can publish the views and customise it, or leave the default.
   `default: early-access::index`.
@@ -149,11 +120,11 @@ $ php artisan vendor:publish --provider="Neo\EarlyAccess\EarlyAccessServiceProvi
   table. You need to do this before you run the migration though. `default: subscribers`
 
 - `notifications` - The default notification classes. You can use your own notification classes if you would like to
-  change how users are notified when they subscribe or unsubscribe.
+  change how users will be notified when they subscribe or unsubscribe.
 
 ## Using `/` or an existing route as the early access URL
 
-To use `/` or an existing route in your application as the early acces URL, you need to do the following:
+To use `/` or an existing route in your application as the early access URL, you need to do the following:
 
 First, register the service provider manually below the `App\Providers\RouteServiceProvider::class` in `config/app.php`.
 
@@ -183,7 +154,7 @@ Next, open your `composer.json` file and add the package in the `dont-discover` 
 // [...]
 
 "laravel": {
-        "dont-discover": [
+    "dont-discover": [
         "neo/laravel-early-access"
     ]
 },
