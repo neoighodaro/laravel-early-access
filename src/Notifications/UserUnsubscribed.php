@@ -20,7 +20,7 @@ class UserUnsubscribed extends Notification implements ShouldQueue
     /**
      * Create a new notification instance.
      *
-     * @param \Neo\EarlyAccess\Subscriber $subscriber
+     * @param  \Neo\EarlyAccess\Subscriber $subscriber
      */
     public function __construct(Subscriber $subscriber)
     {

@@ -66,7 +66,7 @@ class DatabaseService implements SubscriptionProvider
     public function findByEmail(string $email)
     {
         return with($this->repository->findByEmail($email), function ($user) {
-            return $user ? new Subscriber($user) : false;
+            return $user ? Subscriber::make($user) : false;
         });
     }
 }

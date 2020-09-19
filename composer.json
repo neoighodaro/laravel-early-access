@@ -1,51 +1,56 @@
 {
-  "name": "neo/laravel-early-access",
-  "description": "Adds an early access page to your Laravel application.",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Neo Ighodaro",
-      "email": "neo@creativitykills.co",
-      "homepage": "https://creativitykills.co",
-      "role": "Developer"
-    }
-  ],
-  "homepage": "https://github.com/neo/laravel-early-access",
-  "keywords": [
-    "ck",
-    "creativitykills",
-    "early-access",
-    "landing-page"
-  ],
-  "require": {
-    "php": "^7.1",
-    "ext-json": "*",
-    "illuminate/support": "~5"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "~7.0",
-    "mockery/mockery": "^1.1",
-    "orchestra/testbench": "~3.0",
-    "sempro/phpunit-pretty-print": "^1.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Neo\\EarlyAccess\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Neo\\EarlyAccess\\Tests\\": "tests"
-    }
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Neo\\EarlyAccess\\EarlyAccessServiceProvider"
-      ],
-      "aliases": {
-        "EarlyAccess": "Neo\\EarlyAccess\\Facades\\EarlyAccess"
-      }
-    }
-  }
+    "name": "neo/laravel-early-access",
+    "description": "Adds an early access page to your Laravel application.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Neo Ighodaro",
+            "email": "neo@creativitykills.co",
+            "homepage": "https://creativitykills.co",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/neo/laravel-early-access",
+    "keywords": [
+        "ck",
+        "creativitykills",
+        "early-access",
+        "landing-page"
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "illuminate/support": "^6.0|^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0|^9.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "^4.0|^5.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Neo\\EarlyAccess\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Neo\\EarlyAccess\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Neo\\EarlyAccess\\EarlyAccessServiceProvider"
+            ],
+            "aliases": {
+                "EarlyAccess": "Neo\\EarlyAccess\\Facades\\EarlyAccess"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

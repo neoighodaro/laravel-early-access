@@ -36,29 +36,26 @@ class Subscriber implements Arrayable
     /**
      * Subscriber constructor.
      *
-     * @param array $attributes
+     * @param  \Neo\EarlyAccess\Contracts\Subscription\SubscriptionProvider $subscriber
      */
-    public function __construct(array $attributes = [])
+    public function __construct(SubscriptionProvider $subscriber)
     {
-        $this->subscriber = app(SubscriptionProvider::class);
-
-        $this->attributes = [
-            'name' => $attributes['name'] ?? null,
-            'email' => $attributes['email'] ?? null,
-            'subscribed_at' => $attributes['subscribed_at'] ?? null,
-            'verified' => (bool) ($attributes['verified'] ?? false),
-        ];
+        $this->subscriber = $subscriber;
     }
 
     /**
      * Shortcut for instantiating the object.
      *
-     * @param array $attributes
+     * @param  array $attributes
      * @return \Neo\EarlyAccess\Subscriber
      */
     public static function make(array $attributes = [])
     {
-        return new static($attributes);
+        /** @var self $instance */
+        $instance = resolve(self::class);
+        $instance->fillAttributes($attributes);
+
+        return $instance;
     }
 
     /**
@@ -116,7 +113,7 @@ class Subscriber implements Arrayable
     /**
      * Set the subscription status.
      *
-     * @param bool $subscribed
+     * @param  bool $subscribed
      * @return $this
      */
     public function setSubscribed(bool $subscribed = true)
@@ -129,7 +126,7 @@ class Subscriber implements Arrayable
     /**
      * Find a user by email.
      *
-     * @param string|null $email
+     * @param  string|null $email
      * @return \Neo\EarlyAccess\Subscriber|null
      */
     public function findByEmail(string $email = null): ?self
@@ -187,20 +184,23 @@ class Subscriber implements Arrayable
      */
     public function __get($name)
     {
-        if ($this->attributes[$name] ?? false) {
-            return $this->attributes[$name];
-        }
+        return $this->attributes[$name] ?? null;
     }
 
     /**
      * @param $name
      * @param $value
-     * @return mixed
      */
     public function __set($name, $value)
     {
         if (array_key_exists($name, $this->attributes)) {
             $this->attributes[$name] = $value;
         }
+    }
+
+    public function fillAttributes(array $attributes): self
+    {
+        $this->attributes = $attributes;
+        return $this;
     }
 }
