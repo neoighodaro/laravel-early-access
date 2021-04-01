@@ -40,13 +40,13 @@
                                 class="mt-2 lg:mt-0 p-4 lg:px-0 w-full lg:w-2/5 rounded-lg lg:rounded-l-none bg-indigo-dark shadow-lg
                                        lg:shadow-none text-sm text-white uppercase focus:outline-none"
                         >
-                            @lang('early-access::messages.get_early_access')<sup>†</sup>
+                            @lang('early-access::messages.get_early_access')<sup>&dagger;</sup>
                         </button>
                     </div>
                 </form>
                 <div class="mt-10">
                     <span class="text-xs text-grey font-light tracking-wide">
-                        <sup>†</sup>@lang('early-access::messages.no_spam')
+                        <sup>&dagger;</sup>@lang('early-access::messages.no_spam')
                     </span>
                 </div>
             </div>
