@@ -14,17 +14,17 @@
     <nav class="container w-full flex justify-between items-center">
         <div class="py-2">
             <a href="{{ route('early-access.index') }}" class="block mt-1 no-underline">
-                    <span class="text-5xl font-logo uppercase font-black tracking-tight block text-indigo-dark">
-                        {{ config('app.name') }}
-                    </span>
+                <span class="text-5xl font-logo uppercase font-black tracking-tight block text-indigo-dark">
+                    {{ config('app.name') }}
+                </span>
             </a>
         </div>
 
         @if ($loginUrl = config('early-access.login_url'))
             <a class="block no-underline" href="{{ $loginUrl }}" title="@lang('early-access::common.login')">
-                    <span class="text-sm text-indigo-dark hover:text-indigo-darkest uppercase font-medium">
-                        @lang('early-access::common.login')
-                    </span>
+                <span class="text-sm text-indigo-dark hover:text-indigo-darkest uppercase font-medium">
+                    @lang('early-access::common.login')
+                </span>
             </a>
         @endif
     </nav>
@@ -32,9 +32,9 @@
         @yield('content')
     </main>
     <footer class="mt-20 md:mt-32 container py-5">
-            <span class="block text-sm text-center">
-                @lang('early-access::common.copyright', ['year' => date('Y'), 'name' => config('app.name')])
-            </span>
+        <span class="block text-sm text-center">
+            @lang('early-access::common.copyright', ['year' => date('Y'), 'name' => config('app.name')])
+        </span>
     </footer>
 </div>
 </body>
