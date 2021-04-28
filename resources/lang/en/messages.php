@@ -16,7 +16,7 @@ return [
     'no_spam' => 'No spam mail. We promise.',
     'welcome' => 'Welcome to :name',
     'twitter_share_text' => '.@:handle is coming soon. Request early access to be one of the first people to try it out :url #:handle',
-    
+
     'unsubscribe' => [
         'title' => 'Unsubscribe from :name',
         'description' => 'We\'re sorry to se you go. Please confirm with your email.',
@@ -25,6 +25,6 @@ return [
             'error' => 'An error occurred. Please try again.',
             'success' => 'You have been successfully unsubscribed.',
         ],
-        
+
     ],
 ];

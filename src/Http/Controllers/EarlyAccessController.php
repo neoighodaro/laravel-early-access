@@ -36,7 +36,7 @@ class EarlyAccessController extends BaseController
             'name' => 'string|between:3,100',
         ]);
 
-        if (! $subscriber = Subscriber::make()->findByEmail($data['email'])) {
+        if (!$subscriber = Subscriber::make()->findByEmail($data['email'])) {
             $subscriber = Subscriber::make($data);
             $subscriber->subscribe();
         }
