@@ -3,7 +3,7 @@
 return [
 
     /**
-         * Is early access active? When active, the package will display the early access page request for all routes.
+     * Is early access active? When active, the package will display the early access page request for all routes.
      */
     'enabled' => env('EARLY_ACCESS_ENABLED', false),
 
