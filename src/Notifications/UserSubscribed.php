@@ -47,6 +47,7 @@ class UserSubscribed extends Notification implements ShouldQueue
         return (new MailMessage)
             ->subject(trans('early-access::mail.subscribed.subject', ['name' => config('app.name')]))
             ->line(trans('early-access::mail.subscribed.message.intro', ['name' => config('app.name')]))
-            ->action('Share on Twitter', route('early-access.share'));
+            ->line(trans('early-access::mail.subscribed.message.share', ['url' => route('early-access.share')]))
+            ->action(trans('early-access::mail.subscribed.message.unsubscribe'), route('early-access.unsubscribe'));
     }
 }

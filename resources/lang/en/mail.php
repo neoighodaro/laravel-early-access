@@ -12,6 +12,8 @@ return [
         'subject' => 'Early access to :name',
         'message' => [
             'intro' => 'Thanks for requesting early access to :name! We will email you with more information when we are ready to have you try it out.',
+            'share' => 'Want to share our project with the world? Please help us reach more people by sharing on Twitter: :url',
+            'unsubscribe' => 'Unsubscribe from emails',
         ],
     ],
     'unsubscribed' => [

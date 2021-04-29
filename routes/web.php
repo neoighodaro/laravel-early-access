@@ -23,6 +23,9 @@ if (Neo\EarlyAccess\Facades\EarlyAccess::isEnabled()) {
     Route::post($basePath, 'EarlyAccessController@subscribe')
         ->name('early-access.subscribe');
 
-    Route::delete($basePath, 'EarlyAccessController@unsubscribe')
+    Route::get("{$basePath}/unsubscribe", 'EarlyAccessController@unsubscribe')
         ->name('early-access.unsubscribe');
+
+    Route::delete("{$basePath}/unsubscribe", 'EarlyAccessController@verifyUnsubscription')
+        ->name('early-access.verify-unsubscription');
 }

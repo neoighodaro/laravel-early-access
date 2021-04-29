@@ -36,12 +36,24 @@ class EarlyAccessController extends BaseController
             'name' => 'string|between:3,100',
         ]);
 
-        if (! $subscriber = Subscriber::make()->findByEmail($data['email'])) {
+        if (!$subscriber = Subscriber::make()->findByEmail($data['email'])) {
             $subscriber = Subscriber::make($data);
             $subscriber->subscribe();
         }
 
         return redirect()->route('early-access.index')->withSuccess(true);
+    }
+
+    /**
+     * Show the early access page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function unsubscribe()
+    {
+        $details = $this->getBeaconDetails();
+
+        return view('early-access::unsubscribe', compact('details'));
     }
 
     /**
@@ -51,7 +63,7 @@ class EarlyAccessController extends BaseController
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function unsubscribe(Subscriber $subscriber, Request $request)
+    public function verifyUnsubscription(Subscriber $subscriber, Request $request)
     {
         $data = $request->validate(['email' => 'required|email']);
 
@@ -59,7 +71,7 @@ class EarlyAccessController extends BaseController
             return $user ? $user->unsubscribe() : false;
         });
 
-        return redirect()->route('early-access.index')->with([
+        return redirect()->route('early-access.unsubscribe')->with([
             ($unsubscribed ? 'success' : 'error') => true,
         ]);
     }
